@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function displayDate() {
+        let date = document.querySelector(".date");
+        date.innerHTML = Date();
+      }
+      window.addEventListener("resize", function () {
+        document.querySelector(".span").innerHTML = parseInt(
+          Math.random() * 10
+        );
+      });
+      window.addEventListener("mousemove", function () {
+        document.querySelector(".span1").innerHTML = parseInt(
+          Math.random() * 10
+        );
+      });
+      function Onload() {
+        alert("alert from onLoad");
+      }
+      function onChange() {
+        let date = document.querySelector(".u");
+        date.innerHTML = "Hide Date";
+      }
+    </script>
+  </head>
+  <body onload="Onload()">
+    <button class="u" onclick="displayDate()">Show Date</button>
+    <br />
+    <br />
+    <div class="date"></div>
+    <span>Resize window : </span>
+    <span class="span"></span><br /><br />
+    <span>Pointer : </span><span class="span1"></span> <br /><br />
+    Onload
+    <br />
+    <br />
+    <select name="onchange" id="" onchange="onChange()">
+      <option value="onchange">onchange - x</option>
+      <option value="onchangeOff">onchange - y</option>
+    </select>
+  </body>
+</html>
