@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <script>
+      function palindrome() {
+        let a = parseInt(document.getElementById("inp").value);
+        let res = document.querySelector(".res");
+
+        let t = a;
+        // console.log(t);
+        let sum = 0;
+        while (a > 0) {
+          let rem = a % 10;
+          sum = sum * 10 + rem;
+          //console.log(sum);
+          a = parseInt(a / 10);
+        }
+        console.log(sum);
+        if (sum == t) {
+          //console.log(sum);
+          res.innerHTML = "It's a palindrome Number";
+        } else {
+          res.innerHTML = "It's not a palindrome Number";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <label for="input">Enter No : </label>
+    <input type="text" name="input" id="inp" />
+    <button onclick="palindrome()">Check</button>
+    <br /><br />
+    <div class="res"></div>
+  </body>
+</html>

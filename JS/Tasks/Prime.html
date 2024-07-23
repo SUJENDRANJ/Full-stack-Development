@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <script>
+      function primeNo() {
+        let a = document.getElementById("inp").value;
+        let res = document.querySelector(".res");
+        //console.log(a);
+        let prime = 0;
+        for (let i = 2; i < a; i++) {
+          if (a % i === 0) {
+            prime++;
+          }
+        }
+        if (prime > 0) {
+          console.log(prime);
+          res.innerHTML = "It's not a prime Number";
+        }
+        //console.log(prime);
+        else {
+          res.innerHTML = "It's a prime Number";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <label for="input">Enter No : </label>
+    <input type="text" name="input" id="inp" />
+    <button onclick="primeNo()">Check</button>
+    <br />
+    <br />
+    <div class="res"></div>
+  </body>
+</html>

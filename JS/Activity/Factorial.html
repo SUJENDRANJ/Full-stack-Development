@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function fact() {
+        let a = document.getElementById("a").value;
+        let res = document.getElementById("ans");
+        if (a === 0 || a === 1) {
+          res.innerHTML = "1";
+        } else {
+          let fact = 1;
+          for (let i = 2; i <= a; i++) {
+            fact = fact * i;
+          }
+          res.innerHTML = fact;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <label for="a">Number :</label>
+    <input
+      type="text"
+      value="85"
+      name="a"
+      onfocus="this.value='focus'"
+      onblur="value='blur'"
+      id="a"
+    />
+    <br />
+    <br />
+    <button onclick="fact()">Calculate</button>
+    <br />
+    <div id="ans"></div>
+  </body>
+</html>

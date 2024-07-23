@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <script>
+      function starPattern() {
+        let a = parseInt(document.getElementById("inp").value);
+        let res = document.querySelector(".res");
+        for (let i = 0; i < a; i++) {
+          for (let j = 0; j <= i; j++) {
+            let d = document.createElement("span");
+            d.innerHTML = "* ";
+            //console.log("*");
+            res.append(d);
+          }
+          let b = document.createElement("br");
+          res.append(b);
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <label for="input">Enter no of rows : </label>
+    <input type="number" name="input" id="inp" />
+    <button onclick="starPattern()">Check</button>
+    <br /><br />
+    <div class="res"></div>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>JS 1st Pgm</title>
+    <script>
+      //Internal JavaScript
+      function myFunction() {
+        document.write("<b>JS function example</b>");
+      }
+
+      function addition(a, b) {
+        let sum = a + b;
+        document.write("<b>Sum = " + sum);
+      }
+
+      function subtraction(a, b) {
+        let sub = a - b;
+        document.write("<b>Difference = " + sub);
+      }
+      function multiplication(a, b) {
+        let mul = a * b;
+        alert("Multiplication = " + mul);
+        document.write("<b>Multiplication = " + mul);
+      }
+      function division(a, b) {
+        let div = a / b;
+        alert("Division = " + div);
+        document.write("Division = " + div);
+      }
+
+      function myPrompt() {
+        let name = prompt("Enter Your name");
+        alert("Welcome " + name);
+      }
+      function leave() {
+        confirm("Do you wanna exit ?");
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      document.write(
+        "<font color='red'><b>Using Document.write object</b></font>"
+      );
+      var employeeName = "SUJE";
+      var employeeID = 1001;
+      var employeeSalary = 20000.0;
+
+      document.write("<b>");
+      document.write("<br> Employee Name : " + employeeName);
+      document.write("<br> Employee Id : " + employeeID);
+      document.write("<br>Employee Salary : " + employeeSalary);
+      document.write("<b>");
+      //   prompt("");
+      //   confirm("");
+      //   alert("");
+    </script>
+    <br />
+    <br />
+    <button onclick="myFunction()">Click Me</button>
+    <button onclick="addition(10,20)">Add</button>
+    <button onclick="subtraction(30,20)">Subtract</button>
+    <button onclick="multiplication(30,20)">multiplication</button>
+    <button onclick="division(30,20)">division</button>
+
+    <button onclick="myPrompt()">Welcome</button>
+  </body>
+</html>
