@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function myArray() {
+        let skills = [1, 2, 3, "Java"];
+        document.write("length - " + skills.length);
+        document.write("<br>" + skills);
+        skills.push("PSP");
+        document.write("<br>" + skills);
+        skills.pop("2");
+        document.write("<br>" + skills);
+        document.write("<br>" + skills[skills.length - 1]);
+        document.write("<br>" + skills[0]);
+        for (let i = 0; i < skills.length; i++) {
+          document.write("<br>" + skills[i]);
+        }
+
+        let array = Array();
+        array.push(4);
+        document.write("<br>" + array);
+      }
+    </script>
+  </head>
+  <body onload="myArray()">
+    <div class="res"></div>
+  </body>
+</html>
