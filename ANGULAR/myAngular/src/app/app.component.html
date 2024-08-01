@@ -1,0 +1,67 @@
+<!-- Root component -->
+
+<h1>SUJENDRAN J</h1>
+<app-my-component></app-my-component>
+
+<p>Name :{{ name }}</p>
+
+age:{{ age }}
+<br />
+<br />
+Email:{{ email }}
+
+<br />
+<h1>InterPolation</h1>
+<input type="text " value="{{ email }}" />
+<br />
+
+<h1>Property Binding</h1>
+<br />
+Name <input type="text" [value]="name" /> <br /><br />
+<h1>Event Binding</h1>
+<button (click)="changeName()">changeName</button>
+
+<button (click)="changeEmail()">change Email</button>
+
+<br />
+<br />
+<img [src]="imgPath" (click)="changeImage()" alt="" />
+
+<!-- <img
+  src="../assets/photo_2024-05-25_20-44-39.jpg"
+  alt=""
+  height="200px"
+  width="200px"
+/> -->
+<img alt="My image name" src="../assets/photo_2024-05-25_20-44-57.jpg" />
+
+<br /><br />
+
+<input [(ngModel)]="fname" />
+
+<p>Value: {{ fname }}</p>
+
+<button (click)="changeFlag()">change</button>
+<div *ngIf="flag">Suje</div>
+
+<div *ngIf="flag" [ngStyle]="myStyle">
+  <br />
+  <ul>
+    <li *ngFor="let vec of vehicles" (click)="setSelectedItem(vec)">
+      {{ vec }}
+    </li>
+  </ul>
+  <br />
+  <b> {{ selectedVehicle }}</b>
+  <br />
+
+  <div [ngSwitch]="selectedVehicle">
+    <font color="green" *ngSwitchCase="'TwoWheeler'">Bike</font>
+    <font color="green" *ngSwitchCase="'FourWheeler'">Car</font>
+    <font color="green" *ngSwitchDefault>Invalid</font>
+  </div>
+</div>
+<br />
+<button (click)="changeStyle()">ChangeStyle</button>
+<br />
+<h1 [ngClass]="myClass">Change css class</h1>
