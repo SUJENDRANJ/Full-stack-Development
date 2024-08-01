@@ -65,3 +65,22 @@ Name <input type="text" [value]="name" /> <br /><br />
 <button (click)="changeStyle()">ChangeStyle</button>
 <br />
 <h1 [ngClass]="myClass">Change css class</h1>
+
+<br />
+<hr />
+
+<div>
+  <table>
+    <tr>
+      <td><a routerLink="home">HOME</a></td>
+      <td><a routerLink="contact">CONTACT</a></td>
+      <td><a routerLink="about">ABOUT</a></td>
+    </tr>
+  </table>
+  <div>
+    <router-outlet></router-outlet>
+    Space of new Component
+  </div>
+
+  <!-- <app-home></app-home> -->
+</div>
